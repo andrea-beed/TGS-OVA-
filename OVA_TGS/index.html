@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OVA #17 — Disciplina y Organizaciones Inteligentes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- CURSOR PERSONALIZADO -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- BARRA DE PROGRESO DE SCROLL -->
+<div id="scrollBar"></div>
+
+<!-- CANVAS FONDO ANIMADO -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">OVA · TGS #17</span>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#contexto">Contexto</a></li>
+      <li><a href="#conceptos">Conceptos</a></li>
+      <li><a href="#disciplinas">Disciplinas</a></li>
+      <li><a href="#origen">Origen</a></li>
+      <li><a href="#ejemplos">Ejemplos</a></li>
+      <li><a href="#ejercicios">Ejercicios</a></li>
+      <li><a href="#juegos">Juegos</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#creditos">Créditos</a></li>
+    </ul>
+    <div class="hamburger" id="ham" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div>
+    <div class="hero-eyebrow">Teoría General de Sistemas · Proyecto #17</div>
+    <h1>Disciplina y<br><em>Organizaciones Inteligentes</em></h1>
+    <p class="hero-sub">
+      Una exploración profunda de las cinco disciplinas que transforman las organizaciones comunes
+      en sistemas capaces de aprender, adaptarse y crecer continuamente.
+    </p>
+    <div class="hero-cta">
+      <a href="#contexto" class="btn btn-primary"><span>Comenzar →</span></a>
+      <a href="#quiz" class="btn btn-outline">Ir al Quiz</a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip">Peter Senge</span>
+      <span class="chip">Pensamiento Sistémico</span>
+      <span class="chip">La Quinta Disciplina</span>
+      <span class="chip">Aprendizaje Organizacional</span>
+      <span class="chip">Modelos Mentales</span>
+      <span class="chip">Visión Compartida</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="stat-num">5</div><div class="stat-label">Disciplinas de Senge</div></div>
+    <div><div class="stat-num">3</div><div class="stat-label">Juegos Interactivos</div></div>
+    <div><div class="stat-num">10</div><div class="stat-label">Preguntas en el Quiz</div></div>
+    <div><div class="stat-num">6</div><div class="stat-label">Casos Reales</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     01 · CONTEXTO
+══════════════════════════════════════════ -->
+<section id="contexto">
+  <div class="section-inner fade-up">
+    <div class="sec-label">01 · Contextualización</div>
+    <h2 class="sec-title">¿Por qué importa esto?</h2>
+    <p class="sec-desc">
+      En un mundo de cambio constante, las organizaciones que no aprenden quedan obsoletas.
+      El concepto de <strong class="hl">Organización Inteligente</strong> surge como respuesta a esta necesidad.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" style="background:rgba(0,240,255,.08)">🧠</div>
+        <h3>Aprendizaje Continuo</h3>
+        <p>Las organizaciones inteligentes son aquellas capaces de crear, adquirir y transferir conocimiento, modificando su comportamiento para reflejar nuevos saberes y perspectivas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(139,92,246,.08)">🌀</div>
+        <h3>Pensamiento Sistémico</h3>
+        <p>Ver el todo, no solo las partes. Comprender que cada acción genera consecuencias en cadena dentro del sistema organizacional es clave para una gestión efectiva.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(245,158,11,.08)">🏛️</div>
+        <h3>Origen del Concepto</h3>
+        <p>El término fue popularizado por <strong class="hl">Peter Senge</strong> en 1990 con su obra <em>La Quinta Disciplina</em>, revolucionando la administración moderna y la teoría organizacional.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(16,185,129,.08)">🔗</div>
+        <h3>Relación con la TGS</h3>
+        <p>Las organizaciones son sistemas abiertos que interactúan con su entorno. La TGS aporta el marco conceptual para entender sus dinámicas, flujos y propiedades emergentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     02 · CONCEPTOS
+══════════════════════════════════════════ -->
+<section id="conceptos" class="alt-bg">
+  <div class="section-inner fade-up">
+    <div class="sec-label">02 · Marco Teórico</div>
+    <h2 class="sec-title">Conceptos Fundamentales</h2>
+    <p class="sec-desc">Bases teóricas que sustentan el estudio de la disciplina y las organizaciones que aprenden.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" style="background:rgba(0,240,255,.08)">📖</div>
+        <h3>Organización Inteligente</h3>
+        <p>Según Senge (1990), es aquella en la que las personas expanden continuamente su capacidad de crear resultados que realmente desean, donde se fomenta la aspiración colectiva y las personas aprenden a aprender juntas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(139,92,246,.08)">⚙️</div>
+        <h3>Aprendizaje Organizacional</h3>
+        <p>Proceso mediante el cual las organizaciones modifican su comportamiento a partir de experiencias. Distingue entre aprendizaje de <em>circuito simple</em> (corregir errores) y <em>doble circuito</em> (cuestionar supuestos). (Argyris y Schön, 1978)</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(245,158,11,.08)">🔄</div>
+        <h3>Retroalimentación Sistémica</h3>
+        <p>En sistemas organizacionales, la retroalimentación puede ser <em>reforzadora</em> (amplifica comportamientos) o <em>compensadora</em> (estabiliza el sistema). Comprender estos ciclos es esencial para el cambio planificado.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(16,185,129,.08)">🧩</div>
+        <h3>Bucles Causales</h3>
+        <p>Herramientas del pensamiento sistémico que representan cómo las variables de un sistema se influyen mutuamente. Permiten identificar palancas de cambio y anticipar consecuencias no deseadas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(244,63,94,.08)">🌱</div>
+        <h3>Capacidad Generativa</h3>
+        <p>La capacidad de una organización no solo de adaptarse (aprendizaje adaptativo) sino de crear activamente su futuro deseado. Va más allá de la supervivencia; implica innovación y propósito.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(0,240,255,.08)">🏗️</div>
+        <h3>Arquitectura Social</h3>
+        <p>Conjunto de estructuras, procesos y prácticas que dan forma al comportamiento colectivo. Las organizaciones inteligentes diseñan conscientemente su arquitectura para facilitar el aprendizaje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     03 · DISCIPLINAS
+══════════════════════════════════════════ -->
+<section id="disciplinas">
+  <div class="section-inner fade-up">
+    <div class="sec-label">03 · Las Cinco Disciplinas</div>
+    <h2 class="sec-title">El Modelo de Peter Senge</h2>
+    <p class="sec-desc">Las cinco disciplinas de Senge son prácticas individuales y colectivas que, integradas, forman la base de una organización inteligente.</p>
+    <div class="disc-grid">
+      <div class="disc-card d1">
+        <div class="disc-num">01</div>
+        <div class="disc-pill">Integradora</div>
+        <h3>🌀 Pensamiento Sistémico</h3>
+        <p>La disciplina integradora. Ver el mundo como un sistema de interrelaciones y no como una cadena de causas y efectos. Permite identificar patrones y estructuras subyacentes que gobiernan el comportamiento del sistema organizacional. Es la "quinta disciplina" que da nombre a la obra de Senge.</p>
+      </div>
+      <div class="disc-card d2">
+        <div class="disc-num">02</div>
+        <div class="disc-pill">Individual</div>
+        <h3>💡 Dominio Personal</h3>
+        <p>La disciplina de crecimiento personal. Clarificar y profundizar continuamente la visión personal, enfocar energías y desarrollar paciencia. Va más allá de las competencias: es un espíritu de aprendizaje genuino. Las organizaciones aprenden a través de individuos que aprenden.</p>
+      </div>
+      <div class="disc-card d3">
+        <div class="disc-num">03</div>
+        <div class="disc-pill">Cognitiva</div>
+        <h3>🗺️ Modelos Mentales</h3>
+        <p>Supuestos e imágenes internamente arraigadas que influyen en nuestra comprensión del mundo y nuestras acciones. El trabajo con modelos mentales implica aprender a descubrir imágenes internas del mundo, llevarlas a la superficie y someterlas a un riguroso escrutinio.</p>
+      </div>
+      <div class="disc-card d4">
+        <div class="disc-num">04</div>
+        <div class="disc-pill">Colectiva</div>
+        <h3>🎯 Visión Compartida</h3>
+        <p>Construcción de un sentido de compromiso genuino con el futuro de la organización. No se impone desde arriba: emerge del diálogo auténtico sobre lo que la gente realmente desea. Cuando hay visión real, las personas aprenden y se superan porque quieren, no porque se les diga.</p>
+      </div>
+      <div class="disc-card d5">
+        <div class="disc-num">05</div>
+        <div class="disc-pill">Grupal</div>
+        <h3>🤝 Aprendizaje en Equipo</h3>
+        <p>Alinear y desarrollar la capacidad del equipo para crear los resultados que sus miembros realmente desean. Parte del diálogo: la capacidad de los miembros para suspender supuestos e ingresar en un genuino "pensar juntos". Transforma las conversaciones defensivas en exploración colectiva.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     04 · ORIGEN (TIMELINE)
+══════════════════════════════════════════ -->
+<section id="origen" class="alt-bg">
+  <div class="section-inner fade-up">
+    <div class="sec-label">04 · Línea de Tiempo</div>
+    <h2 class="sec-title">Origen y Evolución del Concepto</h2>
+    <p class="sec-desc">El camino intelectual que llevó a la idea de organizaciones que aprenden, desde la cibernética hasta la era del conocimiento.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">🌐</div>
+        <div class="tl-content">
+          <div class="tl-year">1948</div>
+          <h4>Cibernética — Norbert Wiener</h4>
+          <p>Wiener funda la cibernética: el estudio del control y la comunicación en sistemas. Introduce el concepto de retroalimentación como mecanismo de autorregulación, base de todo pensamiento sistémico organizacional.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🧬</div>
+        <div class="tl-content">
+          <div class="tl-year">1968</div>
+          <h4>Teoría General de Sistemas — Von Bertalanffy</h4>
+          <p>Ludwig von Bertalanffy consolida la TGS, aportando el marco para comprender organizaciones como sistemas abiertos con entradas, procesos, salidas y retroalimentación. Fundamento directo del pensamiento sistémico de Senge.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">📚</div>
+        <div class="tl-content">
+          <div class="tl-year">1978</div>
+          <h4>Aprendizaje Organizacional — Argyris &amp; Schön</h4>
+          <p>Desarrollan la teoría del aprendizaje organizacional, distinguiendo entre circuito simple y doble circuito. Introducen el concepto de "modelos mentales" como filtros cognitivos que determinan las decisiones organizacionales.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">⭐</div>
+        <div class="tl-content">
+          <div class="tl-year">1990</div>
+          <h4>La Quinta Disciplina — Peter Senge</h4>
+          <p>Peter Senge publica su obra seminal en el MIT. Las cinco disciplinas (Pensamiento Sistémico, Dominio Personal, Modelos Mentales, Visión Compartida, Aprendizaje en Equipo) se convierten en referente mundial de la administración y la TGS aplicada.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🏭</div>
+        <div class="tl-content">
+          <div class="tl-year">2000s</div>
+          <h4>Era del Conocimiento y la Gestión del Aprendizaje</h4>
+          <p>Google, Toyota, Pixar y otras organizaciones implementan y demuestran en la práctica los principios de Senge. La gestión del conocimiento (Nonaka &amp; Takeuchi) complementa el marco con la dimensión del conocimiento tácito y explícito.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     05 · EJEMPLOS REALES
+══════════════════════════════════════════ -->
+<section id="ejemplos">
+  <div class="section-inner fade-up">
+    <div class="sec-label">05 · Casos Reales</div>
+    <h2 class="sec-title">Organizaciones que Aprenden en la Práctica</h2>
+    <p class="sec-desc">Ejemplos concretos de cómo empresas reales han implementado los principios de las organizaciones inteligentes.</p>
+    <div class="examples-grid">
+      <div class="ex-card">
+        <div class="ex-label">Visión Compartida + Pensamiento Sistémico</div>
+        <h3>Toyota — Sistema de Producción Toyota (TPS)</h3>
+        <p>Toyota construyó una cultura de mejora continua (<em>Kaizen</em>) donde cada empleado puede detener la línea de producción para corregir un error. La visión compartida de "cero defectos" y el aprendizaje desde los errores como sistema es un ejemplo paradigmático.</p>
+        <span class="ex-tag">Manufactura</span>
+      </div>
+      <div class="ex-card">
+        <div class="ex-label">Dominio Personal + Aprendizaje en Equipo</div>
+        <h3>Google — Cultura de Innovación Abierta</h3>
+        <p>Google fomenta que los empleados dediquen el 20% de su tiempo a proyectos personales. Gmail y AdSense nacieron así. Su cultura de "fracasar rápido y aprender" encarna el dominio personal y el aprendizaje colectivo como filosofía organizacional.</p>
+        <span class="ex-tag">Tecnología</span>
+      </div>
+      <div class="ex-card">
+        <div class="ex-label">Modelos Mentales</div>
+        <h3>Nokia vs. Apple — El Peligro de Modelos Rígidos</h3>
+        <p>Nokia dominó el mercado de celulares pero sus modelos mentales la hicieron subestimar el smartphone. Apple, sin historia en telefonía, vio el futuro con otros lentes. Un ejemplo de cómo los modelos mentales rígidos destruyen organizaciones que no aprenden.</p>
+        <span class="ex-tag">Tecnología</span>
+      </div>
+      <div class="ex-card">
+        <div class="ex-label">Pensamiento Sistémico</div>
+        <h3>Medellín — Transformación Urbana Sistémica</h3>
+        <p>La ciudad de Medellín pasó de ser la más violenta del mundo a un referente de innovación. La clave fue un enfoque sistémico: educación, transporte, espacios públicos y cultura actuando juntos como sistema, no como parches aislados.</p>
+        <span class="ex-tag">Gobierno</span>
+      </div>
+      <div class="ex-card">
+        <div class="ex-label">Aprendizaje en Equipo</div>
+        <h3>Pixar — Braintrust y Creatividad Colectiva</h3>
+        <p>Pixar creó el "Braintrust", un grupo que revisa cada película en desarrollo con honestidad radical pero sin autoridad directiva. Nadie da órdenes; todos aprenden juntos. El resultado: años de éxitos consecutivos en innovación narrativa.</p>
+        <span class="ex-tag">Entretenimiento</span>
+      </div>
+      <div class="ex-card">
+        <div class="ex-label">Las 5 Disciplinas Integradas</div>
+        <h3>Ejército de EE.UU. — After Action Reviews (AAR)</h3>
+        <p>Después de cada operación, el ejército realiza revisiones estructuradas donde todos, sin importar rango, identifican qué funcionó, qué falló y por qué. Este sistema institucionalizado de aprendizaje es considerado uno de los mejores modelos de organización que aprende.</p>
+        <span class="ex-tag">Institucional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     06 · EJERCICIOS
+══════════════════════════════════════════ -->
+<section id="ejercicios" class="alt-bg">
+  <div class="section-inner fade-up">
+    <div class="sec-label">06 · Ejercicios</div>
+    <h2 class="sec-title">Practica y Reflexiona</h2>
+    <p class="sec-desc">Lee cada caso, escribe o selecciona tu respuesta y recibe retroalimentación personalizada.</p>
+
+    <!-- EJ 1 -->
+    <div class="ex-box" id="exBox1">
+      <div class="ex-box-num">Ejercicio 01 · Selección múltiple</div>
+      <h3>Identificación de Disciplinas</h3>
+      <p>Una empresa de tecnología descubre que sus departamentos de ventas y desarrollo trabajan aislados. Deciden crear reuniones semanales donde todos comparten perspectivas sin jerarquías, aprenden a escuchar y suspenden juicios.</p>
+      <p style="margin-top:12px"><strong>¿Qué disciplina de Senge están aplicando principalmente?</strong></p>
+      <div class="ex-options" id="exOpts1">
+        <button class="ex-opt" onclick="checkOpt(1,this,'b')">A. Dominio Personal</button>
+        <button class="ex-opt" onclick="checkOpt(1,this,'b')">B. Aprendizaje en Equipo</button>
+        <button class="ex-opt" onclick="checkOpt(1,this,'b')">C. Modelos Mentales</button>
+        <button class="ex-opt" onclick="checkOpt(1,this,'b')">D. Visión Compartida</button>
+      </div>
+      <div class="ex-feedback" id="exFb1"></div>
+    </div>
+
+    <!-- EJ 2 -->
+    <div class="ex-box" id="exBox2">
+      <div class="ex-box-num">Ejercicio 02 · Selección múltiple</div>
+      <h3>Análisis de Bucle Causal</h3>
+      <p>Observa este sistema: <em>Mayor estrés → Más errores → Mayor supervisión → Menor autonomía → Mayor estrés</em>.</p>
+      <p style="margin-top:12px"><strong>¿Qué tipo de bucle de retroalimentación describe esta situación?</strong></p>
+      <div class="ex-options" id="exOpts2">
+        <button class="ex-opt" onclick="checkOpt(2,this,'a')">A. Bucle Reforzador (espiral que amplifica)</button>
+        <button class="ex-opt" onclick="checkOpt(2,this,'a')">B. Bucle Compensador (busca equilibrio)</button>
+        <button class="ex-opt" onclick="checkOpt(2,this,'a')">C. Retroalimentación negativa estabilizadora</button>
+        <button class="ex-opt" onclick="checkOpt(2,this,'a')">D. Ciclo de aprendizaje doble circuito</button>
+      </div>
+      <div class="ex-feedback" id="exFb2"></div>
+    </div>
+
+    <!-- EJ 3 -->
+    <div class="ex-box" id="exBox3">
+      <div class="ex-box-num">Ejercicio 03 · Relaciona el caso con la disciplina</div>
+      <h3>Modelos Mentales en Acción</h3>
+      <p>Un gerente afirma: <em>"Los empleados solo trabajan bien si los vigilas."</em> Esto le impide adoptar el trabajo remoto, aunque los datos muestran que la productividad aumenta con autonomía.</p>
+      <p style="margin-top:12px"><strong>¿Qué describe mejor esta situación?</strong></p>
+      <div class="ex-options" id="exOpts3">
+        <button class="ex-opt" onclick="checkOpt(3,this,'c')">A. Falta de Visión Compartida en la empresa</button>
+        <button class="ex-opt" onclick="checkOpt(3,this,'c')">B. Ausencia de Aprendizaje en Equipo</button>
+        <button class="ex-opt" onclick="checkOpt(3,this,'c')">C. Modelo mental rígido (Teoría X de McGregor) que bloquea el aprendizaje</button>
+        <button class="ex-opt" onclick="checkOpt(3,this,'c')">D. Pensamiento sistémico mal aplicado</button>
+      </div>
+      <div class="ex-feedback" id="exFb3"></div>
+    </div>
+
+    <!-- EJ 4 -->
+    <div class="ex-box" id="exBox4">
+      <div class="ex-box-num">Ejercicio 04 · Respuesta abierta</div>
+      <h3>Diseña una Organización Inteligente</h3>
+      <p>Una universidad colombiana quiere transformarse. Actualmente las facultades trabajan aisladas, no hay retroalimentación interna y las decisiones son centralizadas.</p>
+      <p style="margin-top:12px"><strong>Escribe al menos una iniciativa concreta e indica qué disciplina de Senge activa. Menciona el nombre de la disciplina en tu respuesta.</strong></p>
+      <textarea id="exText4" class="ex-textarea" placeholder="Ejemplo: Propongo crear foros mensuales entre facultades para compartir investigaciones sin jerarquías. Esto activa el Aprendizaje en Equipo..."></textarea>
+      <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+        <button class="reveal-btn" onclick="checkText4()">Verificar mi respuesta</button>
+        <button class="reveal-btn" style="background:rgba(139,92,246,.08);border-color:rgba(139,92,246,.3);color:#c4b5fd" onclick="resetEx4()">Limpiar</button>
+      </div>
+      <div class="ex-feedback" id="exFb4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     07 · JUEGOS
+══════════════════════════════════════════ -->
+<section id="juegos">
+  <div class="section-inner fade-up">
+    <div class="sec-label">07 · Juegos Interactivos</div>
+    <h2 class="sec-title">Aprende Jugando</h2>
+    <p class="sec-desc">Tres actividades interactivas para reforzar el aprendizaje de forma dinámica.</p>
+    <div class="game-tabs">
+      <button class="game-tab active" onclick="switchGame('g1',this)">🔗 Relacionar Conceptos</button>
+      <button class="game-tab" onclick="switchGame('g2',this)">🔤 Descifra la Palabra</button>
+      <button class="game-tab" onclick="switchGame('g3',this)">✅ Verdadero o Falso</button>
+    </div>
+
+    <!-- GAME 1: Match -->
+    <div id="g1" class="game-panel active">
+      <div class="game-title">Relaciona cada disciplina con su descripción</div>
+      <div class="game-subtitle">Haz clic en una disciplina y luego en su descripción correcta.</div>
+      <div class="match-grid">
+        <div class="match-col" id="leftCol"></div>
+        <div class="match-col" id="rightCol"></div>
+      </div>
+      <div class="match-msg" id="matchMsg"></div>
+      <div class="match-score" id="matchScore"></div>
+      <button class="reveal-btn" style="margin-top:18px" onclick="resetMatch()">🔄 Reiniciar juego</button>
+    </div>
+
+    <!-- GAME 2: Scramble -->
+    <div id="g2" class="game-panel">
+      <div class="game-title">¿Puedes descifrar el concepto?</div>
+      <div class="game-subtitle">Lee la pista y escribe la palabra con las letras desordenadas.</div>
+      <div class="word-display" id="scrambledWord"></div>
+      <div class="word-hint" id="wordHint"></div>
+      <div class="word-input-row">
+        <input class="word-input" id="wordInput" type="text" placeholder="Tu respuesta..." onkeydown="if(event.key==='Enter')checkWord()"/>
+        <button class="btn btn-primary" onclick="checkWord()"><span>Verificar</span></button>
+        <button class="btn btn-outline" onclick="nextWord()">Siguiente</button>
+      </div>
+      <div class="word-result" id="wordResult"></div>
+      <div class="game-progress" id="wordProgress"></div>
+    </div>
+
+    <!-- GAME 3: True/False -->
+    <div id="g3" class="game-panel">
+      <div class="game-title">Verdadero o Falso</div>
+      <div class="game-subtitle">Lee el enunciado y decide si es verdadero o falso.</div>
+      <div class="tf-question" id="tfQ"></div>
+      <div class="tf-btns">
+        <button class="tf-btn" onclick="checkTF(true)">✅ Verdadero</button>
+        <button class="tf-btn" onclick="checkTF(false)">❌ Falso</button>
+      </div>
+      <div class="tf-feedback" id="tfFeedback"></div>
+      <div class="tf-score" id="tfScore"></div>
+      <div class="tf-next">
+        <button class="btn btn-outline" onclick="nextTF()" id="tfNextBtn" style="display:none">Siguiente →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     08 · VIDEOS
+══════════════════════════════════════════ -->
+<section id="videos" class="alt-bg">
+  <div class="section-inner fade-up">
+    <div class="sec-label">08 · Videos de Apoyo</div>
+    <h2 class="sec-title">Recursos Audiovisuales</h2>
+    <p class="sec-desc">Haz clic en cualquier video para abrirlo directamente en YouTube.</p>
+    <div class="videos-grid">
+      <div class="vid-card">
+        <a class="vid-thumb-link" href="https://www.youtube.com/watch?v=_a77lL2ri4Y" target="_blank" rel="noopener" onclick="sfxClick()">
+          <img src="https://img.youtube.com/vi/_a77lL2ri4Y/hqdefault.jpg" alt="Video 1" onerror="this.src='https://img.youtube.com/vi/_a77lL2ri4Y/mqdefault.jpg'"/>
+          <div class="vid-overlay">
+            <div class="vid-play-btn"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="white"/></svg></div>
+            <span class="vid-yt-badge">▶ Ver en YouTube</span>
+          </div>
+        </a>
+        <div class="vid-info">
+          <h4>Disciplina y Organizaciones Inteligentes</h4>
+          <p>Video de apoyo para comprender los fundamentos de la disciplina y las organizaciones inteligentes en el marco de la TGS.</p>
+        </div>
+      </div>
+      <div class="vid-card">
+        <a class="vid-thumb-link" href="https://www.youtube.com/watch?v=tAPOnUCIa3s" target="_blank" rel="noopener" onclick="sfxClick()">
+          <img src="https://img.youtube.com/vi/tAPOnUCIa3s/hqdefault.jpg" alt="Video 2" onerror="this.src='https://img.youtube.com/vi/tAPOnUCIa3s/mqdefault.jpg'"/>
+          <div class="vid-overlay">
+            <div class="vid-play-btn"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="white"/></svg></div>
+            <span class="vid-yt-badge">▶ Ver en YouTube</span>
+          </div>
+        </a>
+        <div class="vid-info">
+          <h4>Aprendizaje Organizacional en Acción</h4>
+          <p>Exploración de cómo las organizaciones aplican las cinco disciplinas de Senge para transformarse en sistemas que aprenden continuamente.</p>
+        </div>
+      </div>
+      <div class="vid-card">
+        <a class="vid-thumb-link" href="https://www.youtube.com/watch?v=VIfDYtfoq74" target="_blank" rel="noopener" onclick="sfxClick()">
+          <img src="https://img.youtube.com/vi/VIfDYtfoq74/hqdefault.jpg" alt="Video 3" onerror="this.src='https://img.youtube.com/vi/VIfDYtfoq74/mqdefault.jpg'"/>
+          <div class="vid-overlay">
+            <div class="vid-play-btn"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="white"/></svg></div>
+            <span class="vid-yt-badge">▶ Ver en YouTube</span>
+          </div>
+        </a>
+        <div class="vid-info">
+          <h4>Pensamiento Sistémico y Organización</h4>
+          <p>Análisis del pensamiento sistémico como disciplina integradora y su relación con el modelo de organizaciones inteligentes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     09 · QUIZ FINAL
+══════════════════════════════════════════ -->
+<section id="quiz">
+  <div class="section-inner fade-up">
+    <div class="sec-label">09 · Evaluación</div>
+    <h2 class="sec-title">Quiz Final</h2>
+    <p class="sec-desc">10 preguntas para evaluar tu comprensión. Puntaje automático con retroalimentación inmediata.</p>
+    <div class="quiz-wrap">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="qProgress" style="width:0%"></div>
+      </div>
+      <div id="quizContainer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     10 · CRÉDITOS
+══════════════════════════════════════════ -->
+<section id="creditos" class="alt-bg">
+  <div class="section-inner fade-up">
+    <div class="sec-label">10 · Créditos</div>
+    <h2 class="sec-title">Ficha Técnica</h2>
+    <p class="sec-desc">Autoría, herramientas utilizadas y referencias bibliográficas de esta OVA.</p>
+    <div class="credits-grid">
+      <div class="cred-card">
+        <h4>👩‍💻 Autoría</h4>
+        <p>
+          <strong>Estudiante:</strong> Andrea Xiomara Rodríguez Sánchez<br>
+          <strong>Proyecto N°</strong> 17<br>
+          <strong>Tema:</strong> Disciplina y Organizaciones Inteligentes<br>
+          <strong>Asignatura:</strong> Teoría General de Sistemas<br>
+          <strong>Docente:</strong> Eddy Marleny Ortiz Martínez<br>
+          <strong>Universidad:</strong> Universidad Simón Bolívar — Sede Cúcuta<br>
+          <strong>Año:</strong> 2026
+        </p>
+      </div>
+      <div class="cred-card">
+        <h4>🛠️ Herramientas Usadas</h4>
+        <ul>
+          <li>HTML5, CSS3, JavaScript (Vanilla)</li>
+          <li>Google Fonts (Cormorant Garamond, Outfit)</li>
+          <li>Claude AI (asistencia en desarrollo)</li>
+          <li>YouTube (videos recomendados)</li>
+          <li>GitHub Pages (alojamiento)</li>
+        </ul>
+      </div>
+      <div class="cred-card" style="grid-column:1/-1">
+        <h4>📚 Referencias Bibliográficas</h4>
+        <div class="ref-item">Senge, P. M. (1990). <em>La Quinta Disciplina: El arte y la práctica de la organización abierta al aprendizaje.</em> Granica.</div>
+        <div class="ref-item">Argyris, C., &amp; Schön, D. A. (1978). <em>Organizational Learning: A Theory of Action Perspective.</em> Addison-Wesley.</div>
+        <div class="ref-item">Garvin, D. A. (1993). Building a Learning Organization. <em>Harvard Business Review</em>, 71(4), 78–91.</div>
+        <div class="ref-item">Von Bertalanffy, L. (1968). <em>General System Theory: Foundations, Development, Applications.</em> George Braziller.</div>
+        <div class="ref-item">McGregor, D. (1960). <em>The Human Side of Enterprise.</em> McGraw-Hill.</div>
+        <div class="ref-item">Nonaka, I., &amp; Takeuchi, H. (1995). <em>The Knowledge-Creating Company.</em> Oxford University Press.</div>
+        <div class="ref-item">Checkland, P. (1981). <em>Systems Thinking, Systems Practice.</em> John Wiley &amp; Sons.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO TOP -->
+<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- SECTION TRACKER -->
+<div id="secTracker">
+  <div class="st-label">Secciones</div>
+  <div id="stDots"></div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<footer>
+  <p>OVA #17 · Disciplina y Organizaciones Inteligentes · Rodríguez Sánchez Andrea Xiomara · Universidad Simón Bolívar Cúcuta · 2026</p>
+</footer>
+
+<!-- JS EXTERNO -->
+<script src="main.js"></script>
+</body>
+</html>
